@@ -19,6 +19,7 @@ namespace UserServer.Controllers
         public UsersController(ApplicationDbContext context)
         {
             _context = context;
+            _context.Database.Migrate();
         }
 
         // GET: api/Users
